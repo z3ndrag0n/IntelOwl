@@ -13,7 +13,7 @@ RUN mkdir -p ${LOG_PATH} \
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends apt-utils libsasl2-dev libssl-dev \
-        vim libfuzzy-dev net-tools python-psycopg2 git osslsigncode exiftool \
+        vim libldap2-dev python-dev libfuzzy-dev net-tools python-psycopg2 git osslsigncode exiftool \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 RUN pip3 install --upgrade pip
